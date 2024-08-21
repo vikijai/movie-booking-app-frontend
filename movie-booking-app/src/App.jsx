@@ -1,12 +1,18 @@
-import './App.css'
+import { Routes, Route } from "react-router-dom";
 
+import SigninPage from "./pages/sign-in/SignIn.jsx";
+import SignupPage from "./pages/sign-up/SignUp.jsx";
+
+import "./App.css";
 function App() {
-
   return (
     <>
-      <h3>Hello react app</h3>
+    <Routes>
+      <Route path="/sign-in" element={<SigninPage />} />
+      <Route path="/sign-up" element={<SignupPage />} />
+    </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
